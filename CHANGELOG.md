@@ -1,5 +1,17 @@
 # 变更记录
 
+## 2026-09-01：V-005 七步法第四步前三搜索域重构
+
+- Archive ID：`KNOW-2026-09-01-V005`；Outcome Type=REPAIR（修复）；不形成020；
+- 第四步 Attribution（归因）进一步收窄为“输入 Problem Representation（问题表征），输出 Candidate Direction（候选探索方向）”，不直接生成最终原因或具体行动；
+- 全域统一审查状态为 NORMAL / ABNORMAL / UNKNOWN / NOT APPLICABLE；ABNORMAL 不编码严重程度；
+- Search Domain 01 重构为 Input & Exposure（输入与暴露），使用 Normal Input Audit（正常输入审查）八项 + Exposure Audit（暴露审查）双遍扫描；
+- Search Domain 02 重构为 State, Integrity & Task Capability（运行状态、完整性与任务胜任能力）；Degradation（退化）与 Fatigue（疲劳）从 Integrity（完整性）中摘出；
+- Search Domain 03 重构为 Requirements, Design & Trade-offs（要求、设计与固有权衡），分别使用 Requirement Coherence（要求一致性）、Design Adequacy（设计适当性）、Inherent Trade-off（固有权衡）；
+- 固有权衡改以当前结构下多个评价维度的稳定条件性 Coupling（耦合）与可行边界定义，不再使用“有得必有失”式绝对表述；
+- 明确 Information Provenance（信息来源/信息溯源）≠ Input Source（输入来源）、Current State（当前状态）≠ Operational State（运行状态）、Subjective Exchange Willingness（主观交换意愿）≠ Constraints（客观约束）≠ Inherent Trade-off（固有权衡）；
+- Search Domain 01—03 主体结构暂时冻结，04—12 继续作为待重构候选；`通用归因候选生成标准_V0.2.md` 文件名暂不升级，避免把局部修订冒充整套工具完成。
+
 ## 2026-08-27：U-003 信息五问边界增强
 
 - 保持“五问”结构不变，不新增 U 编号、R 节点或正式污染编号；
