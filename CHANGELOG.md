@@ -1,5 +1,36 @@
 # 变更记录
 
+## 2026-09-04：V-008 七步法第四步接口与依赖域重构
+
+- Archive ID：`KNOW-2026-09-04-V008`；Outcome Type=REPAIR（修复）；不形成020；
+- Search Domain 06 从 Interface, Dependency & Propagation（接口、依赖与传播）收窄为 Interface & Dependency（接口与依赖）；
+- Interface（接口）主体保留 Physical Compatibility（物理兼容性）与 Interface Contract Compatibility（接口契约兼容性）；后者统一承载电气／信号、协议／版本、握手、数据格式／字段／语义等非机械契约，但不把电气概念与协议概念混同；
+- Functional Compatibility（功能兼容性）删除：能力不足回 Domain 02 Task Capability；方案本身不足以支撑需求回 Domain 03 Design Adequacy；仅双方能力成立但接口／契约不相容时归 Domain 06；
+- Dependency（依赖）不重复建立新理论，Domain 06仅保留扫描入口；命中 Failure Independence（失效独立性）、Shared Dependency（共享依赖）、Coupling Mechanism（耦合机制）等问题后调用R-004既有结构；
+- Propagation / Cascade（传播／级联）从Domain 06摘出挂起，保持PARKED / UNRESOLVED，后续在横向Causal Role / Causal Mechanism或剩余搜索域中重审；
+- 新增仿生边界：七步法可继续作为Biomimetic / Bio-inspired（仿生／生物启发）系统，但仿的是可复用认知功能，不把用户个人习惯性排故顺序机械复制为机器规则；
+- 当前纵向进度：01—03 Frozen；04主体成立未最终冻结；原05拆除且Time/Space挂起；06主体完成；下一纵向位置Domain 07。
+
+## 2026-09-03：V-007 七步法第四步时间摘出与归因骨架澄清
+
+- Archive ID：`KNOW-2026-09-03-V007`；Outcome Type=REPAIR（修复）；不形成020；
+- Domain 04继续维持主体骨架成立但未最终冻结；Procedure Deviation 与 Omission / Execution Error 仍待收边；
+- 原Domain 05 Spatiotemporal Coordination（时空协调）继续不整体接受；Time（时间）因与Domain 01 Timing高度重叠，从一级Search Domain位置摘出并与Space一并挂起；
+- 第四步整体结构明确为 Outcome / Explanandum（结果／待解释项）→纵向Search Domain Axis生成候选→横向Orthogonal Dimensions描述／限定／审计；
+- Output（输出）通常属于待解释结果，不再作为独立一级Search Domain；
+- Domain 06保持UNRESOLVED / PENDING，课堂提出的Interface Mismatch / Dependency Failure / Interaction or Coupling / Shared Dependency / Propagation角色化等均只保留为Candidate Decomposition，不冻结；
+- 挂起池记录Time、Space、Degradation / Fatigue，下一优先位置Domain 06。
+
+## 2026-09-02：V-006 七步法第四步执行域与时空域拆分
+
+- Archive ID：`KNOW-2026-09-02-V006`；Outcome Type=REPAIR（修复）；不形成020；
+- Search Domain 04 Execution & Process（执行与流程）形成可用主体骨架：Omission、Incorrect Action / Execution Error、Procedure Deviation、Method–Task Misfit；
+- Domain 04尚未最终冻结，Procedure Deviation与Omission / Execution Error仍存在待收窄交叠；
+- 原Search Domain 05 Spatiotemporal Coordination（时空协调）不再整体接受；Space（空间）摘出挂起；Time（时间）暂留Pending；
+- Domain 01 Timing已覆盖过早／过晚／顺序／频率／间隔／持续时间／同步，因此Time若保留为独立域必须证明额外的稳定因果机制；
+- 延续“分类位置错误可先摘出、后安置”原则；Degradation / Fatigue继续等待Domain 10重审；
+- Interface Contract完整审表继续Deferred。
+
 ## 2026-09-01：V-005 七步法第四步前三搜索域重构
 
 - Archive ID：`KNOW-2026-09-01-V005`；Outcome Type=REPAIR（修复）；不形成020；
