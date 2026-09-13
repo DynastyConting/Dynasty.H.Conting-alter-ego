@@ -1,5 +1,16 @@
 # 变更记录
 
+## 2026-09-13：V-009 七步法第四步资源与韧性域重构
+
+- Archive ID：`KNOW-2026-09-13-V009`；Outcome Type=REPAIR（修复）；不形成020；正式进度仍019；
+- Search Domain 07 从 Resource, Capacity, Allocation & Resilience（资源、容量、分配与韧性）重构并暂时冻结为 Resource & Resilience（资源与韧性）；
+- Resource（资源）只问外部环境中当前任务所需资源是否存在可调用的可用存量／供给源；不以 Domain 01 已覆盖的质量审查在本域重审；机械检查句：就当前任务所需的资源类型，外部环境是否存在可调用的可用供给源／存量？四值 NORMAL / ABNORMAL / UNKNOWN / N/A；
+- Resilience（韧性）问主供给受扰时，靠储备／冗余／备援／松弛／替代供给是否仍能维持当前任务所需；收窄为资源侧缓冲／备援抗扰动，非整系统恢复；例：主源断只剩半瓶撑 → 01当前流入可能NORMAL，Resilience可ABNORMAL；
+- Capacity 记分流不武断删除：外部容器容量 → Resource；通道／管道容量 → Domain 01 Rate；对象自身内部容积 → Domain 03 Design Adequacy；
+- Allocation（分配有无）分流至 Domain 01 Place、Domain 04 Omission、Domain 02 Activation State；公平／合理残留挂起（可能 Domain 11）；
+- 余量并入 Resilience；恢复资源留给 Domain 09；瓶颈／争用不塞入本域；
+- 当前纵向进度：01—03 Frozen；04主体成立未最终冻结；原05拆除且Time/Space挂起；06 Interface & Dependency主体完成；07 暂时冻结 Resource & Resilience；下一纵向位置 Domain 08 Information, Measurement & Model。
+
 ## 2026-09-04：V-008 七步法第四步接口与依赖域重构
 
 - Archive ID：`KNOW-2026-09-04-V008`；Outcome Type=REPAIR（修复）；不形成020；
