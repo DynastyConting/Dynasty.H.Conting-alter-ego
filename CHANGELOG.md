@@ -1,5 +1,13 @@
 # 变更记录
 
+## 2026-11-07：V-010 匹配状态改四值 + Domain 08—12 搁置
+
+- 域级与检查项匹配状态由 NORMAL / ABNORMAL / UNKNOWN / NOT APPLICABLE 改为 **是 / 否 / 未知 / 不适用**；「是」=存在值得继续探索的偏离／命中，「否」=按当前判据未命中；
+- 新增硬约束：每个「是」或「否」之前必须先写判据（阈值／标准／对照／机械检查句／参照状态）；未写判据只能返回「未知」或「不适用」；
+- Domain 08 Information, Measurement & Model 至 12 Stochastic Realization & Irreducible Variation 由「待重构」改为「搁置（PARKED）」；撤销「下一纵向位置 Domain 08」；
+- 搁置后果写死：第四步只能在 01—07 生成候选，信息／测量／模型类问题不覆盖；只落在 08—12 的问题走 Taxonomy Gap（分类体系缺口）出口或按第七步升级；
+- 同步更新 01_主干/七步法.md、ROADMAP.md、MANIFEST.md 的对应状态；文件名继续保留 V0.2。
+
 ## 2026-09-13：V-009 七步法第四步资源与韧性域重构
 
 - Archive ID：`KNOW-2026-09-13-V009`；Outcome Type=REPAIR（修复）；不形成020；正式进度仍019；
